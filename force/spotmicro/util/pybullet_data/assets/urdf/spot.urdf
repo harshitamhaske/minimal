@@ -1,0 +1,695 @@
+<?xml version="1.0" ?>
+<robot name="spot">
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+
+</material>
+<material name="yellow">
+    <color rgba="0.92 0.83 0.0 1"/>
+</material>
+<material name="black">
+    <color rgba="0.1 0.1 0.1 1"/>
+</material>
+<material name="grey">
+    <color rgba="0.6 0.6 0.6 1"/>
+</material>
+<material name="light_blue">
+    <color rgba="0.678 0.847 0.902 1"/> 
+</material>
+
+<material name="golden">
+    <color rgba="1.000 0.843 0.0 1"/> 
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.008295240581080318 -0.002739576675468445 0.17292700566106015" rpy="0 0 0"/>
+    <mass value="0.97"/>
+    <inertia ixx="0.007045860818261918" iyy="0.05018533013712814" izz="0.051279011777961" ixy="0.00016485649826388768" iyz="-0.0001168007745745536" ixz="-3.733456442930709e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_blue"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery">
+  <inertial>
+    <origin xyz="0.005151502934190126 -0.00655890470924438 -0.13673207013708202" rpy="0 0 0"/>
+    <mass value="0.4"/>
+    <inertia ixx="0.00033816920799999844" iyy="0.002269251561199996" izz="0.0024539963499999404" ixy="-5.096779355712785e-16" iyz="-2.6020852139652106e-18" ixz="1.951563910473908e-18"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00171 -0.005957 -0.274464" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/battery.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.00171 -0.005957 -0.274464" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/battery.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Top_Cover1">
+  <inertial>
+    <origin xyz="0.09775249778321064 0.01999880120190154 -0.007917918975839239" rpy="0 0 0"/>
+    <mass value="0.01"/>
+    <inertia ixx="0.0018981617399269207" iyy="0.002138165559090438" izz="0.0038392899157759877" ixy="9.151139086435299e-08" iyz="4.980760630608869e-09" ixz="-2.1117137228633155e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.099609 0.020627 -0.209632" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/Top_Cover1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.099609 0.020627 -0.209632" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/Top_Cover1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_hip">
+  <inertial>
+    <origin xyz="-0.04330246146953602 -0.012492057044125468 -0.011202341384982967" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="0.0006408362618219345" iyy="0.00053959261222776" izz="0.0005883876061230486" ixy="-4.5312501380957194e-05" iyz="7.08611302911652e-05" ixz="-4.589536802142649e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.152192 0.038954 -0.18373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.152192 0.038954 -0.18373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_hip">
+  <inertial>
+    <origin xyz="-0.043302462194397 0.012491962447182606 -0.011202100241462343" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="0.0006408362818290658" iyy="0.0005395926191174086" izz="0.0005883876444021784" ixy="4.531247164380175e-05" iyz="-7.086110951588006e-05" ixz="-4.5895271587999276e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.079108 -0.038373 -0.183732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.079108 -0.038373 -0.183732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_hip">
+  <inertial>
+    <origin xyz="-0.04330246146953905 -0.01249176984284276 -0.011202104890385922" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="0.0006408362618219518" iyy="0.0005395926122277669" izz="0.0005883876061230451" ixy="-4.5312501380957194e-05" iyz="7.086113029116693e-05" ixz="-4.589536802142649e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.079108 0.039627 -0.183732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.079108 0.039627 -0.183732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_upper_leg">
+  <inertial>
+    <origin xyz="-0.005112243369563396 -0.013293003120319682 -0.07465796672303905" rpy="0 0 0"/>
+    <mass value="0.13"/>
+    <inertia ixx="0.0013040807755517036" iyy="0.0013105636715430146" izz="0.00017991785156292947" ixy="-1.921713871266134e-06" iyz="7.025425398499326e-06" ixz="-4.554079626025755e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096041 0.079104 -0.172858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_blue"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096041 0.079104 -0.172858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_upper_leg">
+  <inertial>
+    <origin xyz="-0.00511224336956656 -0.013292715919036899 -0.07465773022844209" rpy="0 0 0"/>
+    <mass value="0.13"/>
+    <inertia ixx="0.0013040807755516984" iyy="0.0013105636715430163" izz="0.000179917851562926" ixy="-1.9217138712643994e-06" iyz="7.025425398500193e-06" ixz="-4.554079626021418e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135259 0.079777 -0.17286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_blue"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.135259 0.079777 -0.17286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_upper_leg">
+  <inertial>
+    <origin xyz="-0.005112242846317422 0.013292712880005941 -0.07465796552731578" rpy="0 0 0"/>
+    <mass value="0.13"/>
+    <inertia ixx="0.0013040807009325837" iyy="0.0013105635564394733" izz="0.0001799178000066754" ixy="1.921718112497632e-06" iyz="-7.025415706232371e-06" ixz="-4.554068530070003e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096041 -0.077851 -0.172858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_blue"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096041 -0.077851 -0.172858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_upper_leg">
+  <inertial>
+    <origin xyz="-0.005112242846320447 0.01329291039358671 -0.07465772903271933" rpy="0 0 0"/>
+    <mass value="0.13"/>
+    <inertia ixx="0.0013040807009325802" iyy="0.001310563556439475" izz="0.00017991780000667715" ixy="1.9217181124967647e-06" iyz="-7.025415706231504e-06" ixz="-4.554068530065666e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135259 -0.078523 -0.17286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_blue"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.135259 -0.078523 -0.17286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_upper_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_lower_leg">
+  <inertial>
+    <origin xyz="0.00018698239808921657 0.023879765693408925 -0.04239106134065181" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="0.000500921946588284" iyy="0.00040443925168893264" izz="0.0001281628902407364" ixy="1.1263314344351835e-07" iyz="-2.1529711112841738e-05" ixz="8.242610845028307e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096041 0.112504 -0.062858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096041 0.112504 -0.062858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_lower_leg">
+  <inertial>
+    <origin xyz="0.00018698239808756512 0.023880052894691667 -0.042390824846054644" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="0.0005009219465882796" iyy="0.00040443925168894435" izz="0.0001281628902407364" ixy="1.1263314343701314e-07" iyz="-2.1529711112841412e-05" ixz="8.242610845074928e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135259 0.113177 -0.06286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.135259 0.113177 -0.06286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_lower_leg">
+  <inertial>
+    <origin xyz="0.00018696862916936507 -0.023879881160866284 -0.04239082671345342" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="0.0005009224902488962" iyy="0.00040444051013349344" izz="0.00012816354932610255" ixy="-1.1266055886761592e-07" iyz="2.1529921443282194e-05" ixz="8.244982960769988e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135259 -0.111923 -0.06286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.135259 -0.111923 -0.06286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_lower_leg">
+  <inertial>
+    <origin xyz="0.00018696862917376433 -0.023880078674446956 -0.042391063208050056" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="0.0005009224902489001" iyy="0.00040444051013348477" izz="0.00012816354932610515" ixy="-1.1266055886154439e-07" iyz="2.1529921443281868e-05" ixz="8.244982960700599e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096041 -0.111251 -0.062858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096041 -0.111251 -0.062858" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_lower_leg.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_foot">
+  <inertial>
+    <origin xyz="-0.01174504370457545 0.08384373896891337 -0.1516023782621839" rpy="0 0 0"/>
+    <mass value="0.005"/>
+    <inertia ixx="1.0297646203956271e-05" iyy="1.0297617788936802e-05" izz="1.3937145322440603e-05" ixy="6.871239688344133e-15" iyz="2.7267684638010437e-16" ixz="-1.0168922547548406e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.108118 0.174848 -0.095693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.108118 0.174848 -0.095693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_right_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_foot">
+  <inertial>
+    <origin xyz="-0.011249043704577313 -0.14745597382980394 -0.1520571417675866" rpy="0 0 0"/>
+    <mass value="0.005"/>
+    <inertia ixx="1.0297646203946296e-05" iyy="1.0297617788948728e-05" izz="1.39371453224354e-05" ixy="6.873408092689104e-15" iyz="2.7072528246963046e-16" ixz="-1.0168922546138943e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.123678 -0.055779 -0.09615" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="0.123678 -0.055779 -0.09615" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_right_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_foot">
+  <inertial>
+    <origin xyz="-0.20644004370529487 -0.08384402971395226 -0.09675737801499243" rpy="0 0 0"/>
+    <mass value="0.005"/>
+    <inertia ixx="1.029764680036331e-05" iyy="1.0297618247698953e-05" izz="1.3937145425916859e-05" ixy="-7.546047120499111e-16" iyz="2.7269104942856393e-13" ixz="-1.0168918955369768e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.302813 -0.173595 -0.040848" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.302813 -0.173595 -0.040848" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_foot">
+  <inertial>
+    <origin xyz="-0.20693404370529928 0.14745616779962833 -0.09630314152039564" rpy="0 0 0"/>
+    <mass value="0.005"/>
+    <inertia ixx="1.029764680034813e-05" iyy="1.0297618247707193e-05" izz="1.3937145425907752e-05" ixy="-7.574236376983734e-16" iyz="2.726892062848707e-13" ixz="-1.0168918954393986e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.072007 0.057033 -0.040396" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.072007 0.057033 -0.040396" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/back_left_foot.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_hip">
+  <inertial>
+    <origin xyz="-0.04330246219439385 0.012491764933601754 -0.011202336736059165" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="0.0006408362818290658" iyy="0.0005395926191173947" izz="0.0005883876444021836" ixy="4.531247164380175e-05" iyz="-7.08611095158818e-05" ixz="-4.5895271587995806e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.152192 -0.037701 -0.18373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.152192 -0.037701 -0.18373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mini_ros/stl/minimal/front_left_hip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid_2" type="fixed">
+  <origin xyz="-0.00171 0.005957 0.274464" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="battery"/>
+</joint>
+
+<joint name="Rigid_3" type="fixed">
+  <origin xyz="-0.099609 -0.020627 0.209632" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Top_Cover1"/>
+</joint>
+
+<joint name="motor_front_right_hip" type="revolute">
+  <origin xyz="0.152192 -0.038954 0.18373" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_hip"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="1.047198" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_right_hip_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_right_hip">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_right_hip_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_left_hip" type="revolute">
+  <origin xyz="-0.079108 0.038373 0.183732" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_left_hip"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="0.785398" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_left_hip_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_left_hip">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_left_hip_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_right_hip" type="revolute">
+  <origin xyz="-0.079108 -0.039627 0.183732" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_right_hip"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="0.785398" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_right_hip_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_right_hip">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_right_hip_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_front_right_upper_leg" type="revolute">
+  <origin xyz="-0.056151 -0.04015 -0.010872" rpy="0 0 0"/>
+  <parent link="front_right_hip"/>
+  <child link="front_right_upper_leg"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="0.872665" lower="-2.443461" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_right_upper_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_right_upper_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_right_upper_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_right_upper_leg" type="revolute">
+  <origin xyz="-0.056151 -0.04015 -0.010872" rpy="0 0 0"/>
+  <parent link="back_right_hip"/>
+  <child link="back_right_upper_leg"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="0.872665" lower="-2.443461" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_right_upper_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_right_upper_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_right_upper_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_front_left_upper_leg" type="revolute">
+  <origin xyz="-0.056151 0.04015 -0.010872" rpy="0 0 0"/>
+  <parent link="front_left_hip"/>
+  <child link="front_left_upper_leg"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="0.872665" lower="-2.443461" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_left_upper_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_left_upper_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_left_upper_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_left_upper_leg" type="revolute">
+  <origin xyz="-0.056151 0.04015 -0.010872" rpy="0 0 0"/>
+  <parent link="back_left_hip"/>
+  <child link="back_left_upper_leg"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="0.872665" lower="-2.443461" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_left_upper_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_left_upper_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_left_upper_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_front_right_lower_leg" type="revolute">
+  <origin xyz="0.0 -0.0334 -0.11" rpy="0 0 0"/>
+  <parent link="front_right_upper_leg"/>
+  <child link="front_right_lower_leg"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="2.792527" lower="-2.792527" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_right_lower_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_right_lower_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_right_lower_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_right_lower_leg" type="revolute">
+  <origin xyz="0.0 -0.0334 -0.11" rpy="0 0 0"/>
+  <parent link="back_right_upper_leg"/>
+  <child link="back_right_lower_leg"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="2.792527" lower="-2.792527" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_right_lower_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_right_lower_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_right_lower_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_back_left_lower_leg" type="revolute">
+  <origin xyz="0.0 0.0334 -0.11" rpy="0 0 0"/>
+  <parent link="back_left_upper_leg"/>
+  <child link="back_left_lower_leg"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="2.792527" lower="-2.792527" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_back_left_lower_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_left_lower_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_left_lower_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="motor_front_left_lower_leg" type="revolute">
+  <origin xyz="0.0 0.0334 -0.11" rpy="0 0 0"/>
+  <parent link="front_left_upper_leg"/>
+  <child link="front_left_lower_leg"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="2.792527" lower="-2.792527" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_left_lower_leg_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_left_lower_leg">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_left_lower_leg_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="front_right_leg_foot" type="fixed">
+  <origin xyz="0.012077 -0.062344 0.032835" rpy="0 0 0"/>
+  <parent link="front_right_lower_leg"/>
+  <child link="front_right_foot"/>
+</joint>
+
+<joint name="back_right_leg_foot" type="fixed">
+  <origin xyz="0.011581 0.168956 0.03329" rpy="0 0 0"/>
+  <parent link="back_right_lower_leg"/>
+  <child link="back_right_foot"/>
+</joint>
+
+<joint name="front_left_leg_foot" type="fixed">
+  <origin xyz="0.206772 0.062344 -0.02201" rpy="0 0 0"/>
+  <parent link="front_left_lower_leg"/>
+  <child link="front_left_foot"/>
+</joint>
+
+<joint name="back_left_leg_foot" type="fixed">
+  <origin xyz="0.207266 -0.168956 -0.022464" rpy="0 0 0"/>
+  <parent link="back_left_lower_leg"/>
+  <child link="back_left_foot"/>
+</joint>
+
+<joint name="motor_front_left_hip" type="revolute">
+  <origin xyz="0.152192 0.037701 0.18373" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_hip"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="1.396263" lower="-1.134464" effort="100" velocity="100"/>
+</joint>
+<transmission name="motor_front_left_hip_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_left_hip">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_left_hip_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
