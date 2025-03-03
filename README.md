@@ -24,8 +24,9 @@ We explored various methods by which such contact estimation could be enabled. W
 
 ## Credits
 
-* Original Spot Design and CAD files: [Spot Micro AI Community](https://spotmicroai.readthedocs.io/en/latest/)(https://github.com/OpenQuadruped/spot_mini_mini)
+* Original Spot Design and CAD files: [Spot Micro AI Community](https://spotmicroai.readthedocs.io/en/latest/)
+* (https://github.com/OpenQuadruped/spot_mini_mini)
 
-* Collaborator on `OpenQuadruped` design, including mechanical parts, custom PCB, and Teensy interface: [Adham Elarabawy](https://github.com/adham-elarabawy/OpenQuadruped)
+* OpenQuadruped design, [Adham Elarabawy](https://github.com/adham-elarabawy/OpenQuadruped)
 
 * OpenAI Gym and Heightfield Interface: [Minitaur Environment](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py)
